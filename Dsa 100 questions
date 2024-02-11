@@ -1,0 +1,22 @@
+
+// Given an array A[] of n numbers and another number x, the task is to check whether or not there exist two elements in A[] whose sum is exactly x. 
+// Javascript program to check if there exists a pair
+// in array whose sum results in x. 
+ 
+// Function to find and print pair
+function checkpair(a, size,x) {
+  for (let i = 0; i < size-1;i++) { // 0,1,2,3,4
+    for (let j= i+1; j<size;j++) { // 1,2,3,4,5 if condetiton is true the execution of code stopped
+      if (a[i] + a[j] == x){
+        console.log("Pair with a given sum " + x + " is (" + a[i] + ", " + a[j] + ")")
+      }
+    }
+  }
+}
+
+let a= [ 0, -1, 2, -3, 1 ]
+let size = a.length
+let x = -2
+
+checkpair(a,size,x)
+ 
